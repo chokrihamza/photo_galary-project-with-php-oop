@@ -28,6 +28,7 @@ class Database
 
   private function confirm_query($result)
   {
+  
     if (!$result) {
       die('DB connetion failed' . $this->connection->error_log());
     }
