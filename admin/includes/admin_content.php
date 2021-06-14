@@ -10,8 +10,8 @@
       </h1>
       <?php
           $sql="SELECT * FROM users WHERE id=1";
-          $reslut=$database->query($sql);
-          $user_found=mysqli_fetch_array($reslut);
+      $result = $database->query($sql);
+      $user_found = mysqli_fetch_array($result);
           var_dump($user_found);
           echo $user_found['username'];
           ?>
