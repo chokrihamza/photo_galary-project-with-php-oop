@@ -9,20 +9,24 @@
 
       </h1>
       <?php
-      $user = new User();
-      $user->username = "toyota";
-      $user->password = "toyota";
-      $user->last_name = "toyota";
-      $user->first_name = "toyota";
-      $user->create();
-      // $user = User::find_user_by_id(3);
+      // $user = new User();
+      // $user->username = "tata";
+      // $user->password = "tata";
+      // $user->last_name = "tata";
+      // $user->first_name = "tata";
+      // $user->create();
+      // $user = User::find_user_by_id(4);
       // $user->username = "lean";
+      // $user->password = "toyota";
+      // $user->last_name = "toyota";
+      // $user->first_name = "toyota";
       // $user->update();
       // $user = User::find_user_by_id(2);
       // $user->delete();
       // $user = new User();
       // $user->username = "whatever";
       // $user->save();
+
       
           ?>
       <ol class="breadcrumb">
