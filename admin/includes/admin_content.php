@@ -10,12 +10,19 @@
       </h1>
       <?php
       $user = new User();
-      $user->username = "Exemple user";
-      $user->password = "Exemple pass user";
-      $user->last_name = "Exemple last user";
-      $user->first_name = "Exemple first user";
+      $user->username = "toyota";
+      $user->password = "toyota";
+      $user->last_name = "toyota";
+      $user->first_name = "toyota";
       $user->create();
-    
+      // $user = User::find_user_by_id(3);
+      // $user->username = "lean";
+      // $user->update();
+      // $user = User::find_user_by_id(2);
+      // $user->delete();
+      // $user = new User();
+      // $user->username = "whatever";
+      // $user->save();
       
           ?>
       <ol class="breadcrumb">
