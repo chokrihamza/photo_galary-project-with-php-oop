@@ -24,10 +24,22 @@
       // $user = User::find_user_by_id(2);
       // $user->delete();
       // $user = new User();
-      // $user->username = "whatever";
+      // $user->username = "boom";
       // $user->save();
-
-      
+      // $photos = Photo::find_all();
+      // foreach ($photos as $photo) {
+      //   echo $photo->title;
+      // }
+      // $user = new Photo();
+      // $user->title = "photo for man";
+      // $user->description = "gfhfh";
+      // $user->filename = "ph.jpg";
+      // $user->type = "image";
+      // $user->size = "12";
+      // $user->create();
+      echo DS;
+      echo SITE_ROOT;
+      echo INCLUDES_PATH;
           ?>
       <ol class="breadcrumb">
         <li>
