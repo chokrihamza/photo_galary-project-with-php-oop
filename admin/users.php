@@ -50,8 +50,8 @@
             <?php foreach ($users as $user) : ?>
             <tr>
               <td><?php echo $user->id; ?></td>
-              <td><img class="thumbnail" style="width: 50px;" src="<?php echo $user->image_path_and_placeholder();   ?>"
-                  alt="" />
+              <td><img class="thumbnail" style="width: 50px; "
+                  src="<?php echo $user->image_path_and_placeholder();   ?>" alt="" />
                 <div class="pictures_link">
                   <a href="delete_user.php?id=<?php echo $user->id; ?>">Delete</a>
                   <a href="edit_user.php?id=<?php echo $user->id; ?>">Edit</a>
