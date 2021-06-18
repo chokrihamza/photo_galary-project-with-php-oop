@@ -47,10 +47,19 @@
             </tr>
           </thead>
           <tbody>
-            <?php foreach ($photos as $photo)   : ?>
+            <?php foreach ($photos as $photo) : ?>
             <tr>
-              <td><img style="width: 200px;" src="<?php echo $photo->picture_path()   ?>" alt="" /></td>
-              <td><?php echo $photo->photo_id; ?></td>
+
+              <td><img class="thumbnail" style="width: 200px;" src="<?php echo $photo->picture_path()   ?>" alt="" />
+                <div class="pictures_link">
+                  <button class="btn btn-danger"><a
+                      href="delete_photo.php?id=<?php echo $photo->id; ?>">Delete</a></button>
+                  <button class="btn btn-warning"><a
+                      href="edit_photo.php?id=<?php echo $photo->id; ?>">Edit</a></button>
+                  <button class="btn btn-link"><a href="#">View</a></button>
+                </div>
+              </td>
+              <td><?php echo $photo->id; ?></td>
               <td><?php echo $photo->filename; ?></td>
               <td><?php echo $photo->title; ?></td>
               <td><?php echo $photo->size; ?></td>

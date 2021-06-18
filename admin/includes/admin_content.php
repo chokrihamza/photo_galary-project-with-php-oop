@@ -37,9 +37,8 @@
       // $user->type = "image";
       // $user->size = "12";
       // $user->create();
-      echo DS;
-      echo SITE_ROOT;
-      echo INCLUDES_PATH;
+      $user = Photo::find_by_id(5);
+      var_dump($user);
           ?>
       <ol class="breadcrumb">
         <li>
