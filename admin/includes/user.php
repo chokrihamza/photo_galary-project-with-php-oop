@@ -29,11 +29,9 @@ class User extends Db_object
     }
   }
 
-  public function save_user_and_image()
+  public function upload_photo()
   {
-    if ($this->id) {
-      $this->update();
-    } else {
+   
       if (!empty($this->errors)) {
         return false;
       }
@@ -51,12 +49,13 @@ class User extends Db_object
           unset($this->tmp_path);
           return true;
         }
+        
       } else {
         $this->errors[] = "the file directory probably does not have permission";
         return false;
       }
     }
-  }
+  
 
 
 

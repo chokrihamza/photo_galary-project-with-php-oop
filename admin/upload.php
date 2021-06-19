@@ -8,7 +8,7 @@ $message="";
     if(isset($_POST['submit'])){
       $photo=new Photo();
       $photo->title=$_POST['title'];
-      var_dump($_FILES['file_upload']);
+      
       $photo->set_file($_FILES['file_upload']);
   if($photo->save()){
     $message="Photo uploaded successfully";
