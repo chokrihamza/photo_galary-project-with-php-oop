@@ -33,7 +33,7 @@
       <h1 class="page-header">
         comments
         <small>Subheading</small>
-        <a href="add_user.php" class="btn btn-primary">Add user</a>
+
       </h1>
       <div class="col-md-12">
         <table class="table table-hover">
