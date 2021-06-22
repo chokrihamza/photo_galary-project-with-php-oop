@@ -18,7 +18,7 @@ if (isset($_POST['update'])) {
     $user->last_name = $_POST['last_name'];
     $user->password = $_POST['password'];
     $user->set_file($_FILES['user_image']);
-    echo "fghgfh";
+
     $user->upload_photo();
     $user->save();
     redirect("edit_user.php?id={$user->id}");
@@ -100,7 +100,7 @@ if (isset($_POST['update'])) {
 
           </div>
           <div class="form-group">
-            <a class="btn btn-danger" href="delete_user.php?id=<?php echo $user->id; ?>">Delete</a>
+            <a id="user-id" class="btn btn-danger" href="delete_user.php?id=<?php echo $user->id; ?>">Delete</a>
 
             <input type="submit" name="update" class="btn btn-info pull-right" value="update">
 

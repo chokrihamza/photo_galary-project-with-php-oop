@@ -80,7 +80,12 @@ class User extends Db_object
     $the_reslut_array = self::find_by_query($sql);
     return  !empty($the_reslut_array) ? array_shift($the_reslut_array) : false;
   }
- 
 
+  public function ajax_save_user_image($user_image, $user_id)
+  {
+    $this->user_image = $user_image;
+    $this->id = $user_id;
+    $this->save();
+  }
   
 }
