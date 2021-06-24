@@ -35,6 +35,7 @@
         <small>Subheading</small>
 
       </h1>
+      <P class="bg-success"><?php echo $message ?></P>
       <div class="col-md-12">
         <table class="table table-hover">
           <thead>
