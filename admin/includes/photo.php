@@ -73,4 +73,15 @@ class Photo extends Db_object
       return false;
     }
   }
+
+  public static function display_sidebar_data($photo_id)
+  {
+    $photo = Photo::find_by_id($photo_id);
+
+    $output = "<img class='thumbnail' src='{$photo->picture_path()}'/>";
+    $output .= "<p>{$photo->filename}</p>";
+    $output .= "<p>{$photo->type}</p>";
+    $output .= "<p>{$photo->size}</p>";
+    echo $output;
+  }
 }

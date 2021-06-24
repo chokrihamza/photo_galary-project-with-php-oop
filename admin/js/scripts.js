@@ -4,7 +4,8 @@ $(document).ready(function () {
   let user_id;
   let image_src;
   let image_href_splitted;
-  let image_id;
+  let image_name;
+  let photo_id;
   $(".modal_thumbnails").click(function () {
 
     $("#set_user_image").prop('disabled', false);
@@ -14,6 +15,23 @@ $(document).ready(function () {
     image_src = $(this).prop('src');
     image_href_splitted = image_src.split("/");
     image_name = image_href_splitted[image_href_splitted.length - 1];
+    photo_id = $(this).attr("data");
+    $.ajax({
+      url: "includes/ajax_code.php",
+      data: { photo_id: photo_id },
+      type: "POST",
+      success: function (data) {
+        if (!data.error) {
+          //location.reload(true);
+          $("#modal_sidebar").html(data);
+
+        }
+      }
+
+    })
+
+
+
 
   });
   $("#set_user_image").click(function () {
@@ -23,7 +41,9 @@ $(document).ready(function () {
       type: "POST",
       success: function (data) {
         if (!data.error) {
-          location.reload(true);
+          //location.reload(true);
+          $(".user_image_box a img").prop('src', data);
+
         }
       }
 
@@ -31,7 +51,11 @@ $(document).ready(function () {
   });
 
 
-
+  // edit photo
+  $(".info-box-header").click(function () {
+    $(".inside").slideToggle("fast");
+    $('#toggle').toggleClass("glyphicon-menu-down glyphicon, glyphicon-menu-up glyphicon");
+  })
 
 
 })
