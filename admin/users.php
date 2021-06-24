@@ -30,11 +30,14 @@
   <!-- Page Heading -->
   <div class="row">
     <div class="col-lg-12">
+
+
       <h1 class="page-header">
         users
         <small>Subheading</small>
         <a href="add_user.php" class="btn btn-primary">Add user</a>
       </h1>
+      <p class="bg-success"><?php echo $message; ?></p>
       <div class="col-md-12">
         <table class="table table-hover">
           <thead>

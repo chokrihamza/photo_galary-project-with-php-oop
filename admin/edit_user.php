@@ -21,7 +21,8 @@ if (isset($_POST['update'])) {
 
     $user->upload_photo();
     $user->save();
-    redirect("edit_user.php?id={$user->id}");
+    redirect("users.php");
+    $session->message("The user has been updated");
   }
 }
 
@@ -68,7 +69,8 @@ if (isset($_POST['update'])) {
       </h1>
 
       <div class="col-md-6 user_image_box">
-        <a href="#" data-toggle="modal" data-target="#photo-modal"><img style="width:70%;" class="img-responsive" src="<?php echo $user->image_path_and_placeholder() ?>" alt="" /></a>
+        <a href="#" data-toggle="modal" data-target="#photo-modal"><img style="width:70%;" class="img-responsive"
+            src="<?php echo $user->image_path_and_placeholder() ?>" alt="" /></a>
       </div>
       <form action="" method="post" enctype="multipart/form-data">
         <div class="col-md-6 ">

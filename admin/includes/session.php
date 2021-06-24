@@ -4,8 +4,8 @@ class Session
 {
   private $signed_in = false;
   public $user_id;
-  public $message;
   public $count;
+  public $message;
   function __construct()
   {
     session_start();
@@ -13,6 +13,7 @@ class Session
     $this->check_the_login();
     $this->check_message();
   }
+
 
   public function visitor_count()
   {
@@ -32,7 +33,7 @@ class Session
     }
   }
 
-  public function check_message()
+  private function check_message()
   {
     if (isset($_SESSION['message'])) {
       $this->message = $_SESSION['message'];
@@ -78,3 +79,4 @@ class Session
 }
 
 $session = new Session();
+$message = $session->message();
