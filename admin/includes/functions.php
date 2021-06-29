@@ -3,6 +3,7 @@
 
 function autoloader($class)
 {
+  
   $class = strtolower($class);
   $the_path = "includes/{$class}.php";
 
